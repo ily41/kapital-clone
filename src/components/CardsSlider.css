@@ -1,0 +1,298 @@
+.cards-slider-section {
+    padding-top: 250px;
+    /* Keep space for service cards */
+    padding-bottom: 0px;
+    width: 100%;
+}
+
+.slider-content-wrapper {
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+/* 1. Top Text Container */
+.slider-top-text {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-bottom: 50px;
+    /* The gap */
+    text-align: left;
+}
+
+.slider-top-text h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 16px;
+    font-weight: 400;
+}
+
+.slider-top-text h2 strong {
+    font-weight: 700;
+}
+
+.slider-top-text p {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+/* 2. Gray Container */
+.slider-gray-full-width {
+    background-color: #E9ECF0;
+    width: 100%;
+    padding-block: 40px;
+    /* Vertical padding */
+    /* Fixed height to match design feel roughly */
+    position: relative;
+    display: flex;
+    /* To vertically align content if needed */
+    align-items: center;
+}
+
+.slider-gray-inner {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* Align top */
+    position: relative;
+    height: 100%;
+}
+
+/* Container 1: Left Content */
+.gray-left-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    flex: 1;
+    padding-right: 40px;
+    gap: 40px;
+    /* Gap between text row and button */
+}
+
+.features-wrapper {
+    display: flex;
+    gap: 60px;
+}
+
+.feature-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.feature-block h4 {
+    font-size: 20px;
+    /* Red text size */
+    font-weight: 600;
+    margin-bottom: 8px;
+    /* Color handled inline */
+}
+
+.feature-block span {
+    font-size: 14px;
+    color: #333;
+}
+
+
+.button-wrapper .order-btn {
+    background-color: #ff4b60;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    min-width: 190px;
+    padding: 14px 40px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.button-wrapper .order-btn:hover {
+    opacity: 0.9;
+}
+
+.card-text-q {
+    width: 50%
+}
+
+/* Container 2: Image */
+.gray-image-container {
+    flex: 0 0 auto;
+    width: 300px;
+    /* estimated width */
+    position: absolute;
+    /* Transformation */
+    top: -90px;
+    /* Pop up out of the gray box */
+    z-index: 10;
+    right: 5%;
+
+}
+
+.gray-image-container img {
+    width: 60%;
+    min-width: 190px;
+    min-height: 330px;
+    object-fit: cover;
+    height: auto;
+    position: absolute;
+    left: 0;
+    /* Add slight 3D rotate if desired, user asked for exact UI from pics */
+    transform:  rotateY(-15deg) rotateX(5deg);
+    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.3));
+}
+
+/* Container 3: Buttons */
+.gray-buttons-container {
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin-top: 100px;
+}
+
+.nav-btn {
+    pointer-events: auto;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #999;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.nav-btn:hover {
+    color: #333;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 0.4s ease-out;
+}
+
+.fade-in-img {
+    animation: fadeInImg 0.5s ease-out;
+    transform: translateY(-90px);
+    /* Keep the base transform in animation keyframe usually, but here just fading opacity */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInImg {
+    from {
+        opacity: 0;
+        transform: translateY(-70px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(-90px);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cards-slider-section {
+       margin-top: 200px;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .gray-image-container {
+        width: 250px;
+        left: 50%;
+        transform: translateX(-50%) ;
+        top: -200px;
+    }
+    .slider-content-wrapper {
+        width: 100%;
+        margin: 100px auto;
+
+    }
+
+    .order-btn {
+        width: 100%;
+    }
+
+    @keyframes fadeInImg {
+        from {
+            opacity: 0;
+            transform: translateY(-40px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(-60px);
+        }
+    }
+
+    .slider-top-text {
+        text-align: left;
+        margin-bottom: 190px;
+    }
+
+    .slider-gray-full-width {
+        height: auto;
+        padding-bottom: 60px;
+    }
+
+    .slider-gray-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .gray-left-container {
+        align-items: center;
+        padding-right: 0;
+        margin-bottom: 40px;
+        margin-top: 200px;
+        width: 90%;
+        align-items: stretch;
+    }
+
+    .features-wrapper {
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .feature-block {
+        align-items: center;
+    }
+
+    .button-wrapper {
+        margin-top: 20px;
+    }
+
+  
+
+    .gray-buttons-container {
+        top: auto;
+        bottom: 20px;
+        width: 200px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

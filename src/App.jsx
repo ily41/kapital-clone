@@ -2,8 +2,7 @@ import Header from './components/Header'
 import SubNavbar from './components/SubNavbar'
 import Slider from './components/Slider'
 import ServiceCards from './components/ServiceCards'
-import BirbankStarSlider from './components/BirbankStarSlider'
-import BirbankMiles from './components/BirbankMiles'
+import CardsSlider from './components/CardsSlider'
 import './App.css'
 
 function App() {
@@ -11,14 +10,14 @@ function App() {
     <>
       <Header />
       <SubNavbar />
-      
+
       <main>
         <div className="slider-section">
           <Slider />
           <ServiceCards />
         </div>
-        <BirbankStarSlider />
-        <BirbankMiles />
+        <CardsSlider />
+        <div className='h-100'></div>
       </main>
     </>
   )
