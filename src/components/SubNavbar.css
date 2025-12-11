@@ -1,0 +1,74 @@
+.sub-navbar {
+    background: #E8ECF1;
+    width: 100%;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 2px;
+
+}
+
+.sub-navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 2rem;
+    padding: 1rem 2rem;
+    max-width: 1240px;
+    margin: 0 auto;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.sub-navbar-container::-webkit-scrollbar {
+    display: none;
+}
+
+.sub-nav-link {
+    color: #555;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: color 0.2s;
+    padding: 0.25rem 0;
+    position: relative;
+}
+
+.sub-nav-link:hover {
+    color: #EF3E42;
+}
+
+.sub-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #EF3E42;
+    transition: width 0.2s;
+}
+
+.sub-nav-link:hover::after {
+    width: 100%;
+}
+
+/* Hide sub navbar on mobile */
+@media (max-width: 768px) {
+    .sub-navbar {
+        display: none;
+    }
+}
+
+/* Tablet adjustments */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .sub-navbar-container {
+        gap: 1.5rem;
+        padding: 0.875rem 1.5rem;
+    }
+
+    .sub-nav-link {
+        font-size: 12px;
+        white-space: wrap;
+    }
+}

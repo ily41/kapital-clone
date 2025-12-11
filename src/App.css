@@ -1,0 +1,8 @@
+main {
+  min-height: calc(100vh - 200px);
+}
+
+.slider-section {
+  position: relative;
+  width: 100%;
+}

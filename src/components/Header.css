@@ -1,0 +1,145 @@
+.main-header {
+    position: relative;
+    background: white;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-top-bar {
+    height: 2px;
+    background: #EF3E42;
+    width: 100%;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo img {
+    height: 38px;
+    width: auto;
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: color 0.2s;
+    white-space: nowrap;
+}
+
+.nav-link:hover {
+    color: #EF3E42;
+}
+
+.nav-item-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.location-icon {
+    flex-shrink: 0;
+}
+
+.language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+.lang-link {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: color 0.2s;
+}
+
+.lang-link:hover {
+    color: #EF3E42;
+}
+
+.search-button {
+    background: transparent;
+    border: 1.5px solid #EF3E42;
+    border-radius: 6px;
+    padding: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    margin-left: 0.5rem;
+    color: #EF3E42;
+}
+
+.search-button:hover {
+    background: #EF3E42;
+    color: white;
+}
+
+/* Mobile Navigation */
+.mobile-menu-button {
+    display: none;
+    background: #EF3E42;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.mobile-menu-button:hover {
+    background: #d13438;
+}
+
+.mobile-menu-button svg {
+    display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-container {
+        padding: 1rem 1.5rem;
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-menu-button {
+        display: flex;
+    }
+
+    .header-logo img {
+        height: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container {
+        padding: 0.75rem 1rem;
+    }
+}
