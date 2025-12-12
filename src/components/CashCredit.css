@@ -1,0 +1,375 @@
+.cash-credit-section {
+    padding-bottom: 0px;
+    width: 100%;
+}
+
+.cash-credit-content-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.cash-credit-top-text-container {
+    display: flex;
+    justify-content: center;
+    margin-left: 24%;
+}
+
+.cash-credit-top-text-dessktop {
+    display: none;
+}
+
+/* Top Text Container - Different alignment (left-aligned but different from CardsSlider) */
+.cash-credit-top-text {
+    margin-bottom: 50px;
+    text-align: left;
+    display: inline-block;
+
+
+}
+
+.cash-credit-image-inner-gray {
+    position: absolute;
+    top: -190px;
+    right: 650px
+}
+
+.cash-credit-image-mobile img {
+    display: none;
+
+    width: 400px;
+
+    margin: auto;
+}
+
+.cash-credit-image-mobile {
+    position: absolute;
+    z-index: 50;
+    top: 40px;
+    left: 240px
+}
+
+
+
+
+.cash-credit-top-text h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 16px;
+    font-weight: 400;
+}
+
+.cash-credit-top-text p {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+    max-width: 100%;
+}
+
+/* Gray Container */
+.cash-credit-gray-full-width {
+    background-color: #E9ECF0;
+    width: 100%;
+    padding-block: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.cash-credit-gray-inner {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+    gap: 40px;
+}
+
+/* Container 1: Image (Left) */
+.cash-credit-image-container {
+    flex: 0 0 auto;
+    width: 350px;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.cash-credit-image-container img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.3));
+}
+
+/* Container 2: Right Content (Features & Button) */
+.cash-credit-right-container {
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    justify-content: end;
+    height: 100%;
+    flex: 1;
+    padding-left: 40px;
+    gap: 40px;
+    align-items: flex-start;
+    margin-right: 80px
+}
+
+.cash-credit-right-container-inner {
+    position: relative;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-left: 30%;
+}
+
+.cash-credit-features-wrapper {
+    white-space: nowrap;
+    display: flex;
+    gap: 150px;
+    align-self: center;
+}
+
+.cash-credit-feature-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.cash-credit-feature-block h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.cash-credit-feature-block span {
+    font-size: 14px;
+    color: #333;
+}
+
+.cash-credit-button-wrapper .cash-credit-order-btn {
+    background-color: #ff4b60;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    min-width: 190px;
+    padding: 14px 40px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    align-self: end;
+    margin-top: 40px;
+
+
+
+}
+
+
+.cash-credit-button-wrapper .cash-credit-order-btn:hover {
+    opacity: 0.9;
+}
+
+/* Responsive */
+/* @media (max-width: 1024px) {
+    .cash-credit-gray-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .cash-credit-image-inner-gray {
+        display: none;
+    }
+
+    .cash-credit-image-container {
+        width: 280px;
+        order: 1;
+        justify-content: center;
+    }
+
+    .cash-credit-right-container {
+        padding-left: 0;
+        align-items: center;
+        justify-items: center;
+        order: 2;
+        width: 100%;
+    }
+
+    .cash-credit-features-wrapper {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px;
+        width: 100%;
+    }
+
+    .cash-credit-feature-block {
+        align-items: center;
+        text-align: center;
+        flex: 1;
+        min-width: 150px;
+    }
+
+    .cash-credit-button-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .cash-credit-button-wrapper .cash-credit-order-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+} */
+
+@media (max-width: 1024px) {
+
+
+    .cash-credit-top-text {
+        text-align: left;
+        margin-bottom: 0;
+    }
+
+    .cash-credit-top-text-dessktop {
+        display: block;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .cash-credit-top-text-container {
+        display: none;
+    }
+
+    .cash-credit-image-inner-gray {
+        display: none;
+    }
+
+    .cash-credit-image-mobile {
+        display: block;
+        position: absolute;
+        top: 130px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 50;
+    }
+
+    .cash-credit-image-mobile img {
+        display: block;
+        width: 375px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .cash-credit-top-text h2 {
+        font-size: 28px;
+    }
+
+    .cash-credit-top-text p {
+        font-size: 13px;
+    }
+
+    .cash-credit-gray-full-width {
+        margin-top: 200px;
+        margin-bottom: 50px;
+        padding-left: 0;
+        padding-top: 80px;
+        padding-bottom: 30px;
+        justify-content: center;
+    }
+
+    .cash-credit-gray-inner {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+
+
+    .cash-credit-image-container {
+        width: 400px;
+        transform: translateY(-150px);
+        display: none;
+    }
+
+    .cash-credit-right-container {
+        gap: 30px;
+    }
+
+    .cash-credit-right-container {
+        padding-left: 0;
+        margin-right: 0;
+        align-items: center;
+        width: 100%;
+    }
+
+    .cash-credit-right-container-inner {
+        margin-left: 0;
+        align-items: center;
+        width: 100%;
+    }
+
+    .cash-credit-features-wrapper {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .cash-credit-feature-block {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cash-credit-feature-block h4 {
+        font-size: 18px;
+    }
+
+    .cash-credit-button-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .cash-credit-button-wrapper .cash-credit-order-btn {
+        width: 100%;
+        max-width: 300px;
+        padding: 12px 30px;
+        align-self: center;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .cash-credit-image-mobile {
+        top: 140px;
+    }
+
+    .cash-credit-image-mobile img {
+        width: 450px;
+    }
+
+    .cash-credit-gray-full-width {
+        margin-top: 250px;
+        padding-top: 100px;
+    }
+
+    .cash-credit-top-text h2 {
+        font-size: 24px;
+    }
+
+    .cash-credit-top-text p {
+        font-size: 12px;
+    }
+
+    .cash-credit-feature-block h4 {
+        font-size: 16px;
+    }
+}

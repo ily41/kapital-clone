@@ -152,6 +152,7 @@
 
 /* Container 3: Buttons */
 .gray-buttons-container {
+    
     display: flex;
     justify-content: space-between;
     pointer-events: none;
@@ -254,6 +255,7 @@
     .slider-gray-full-width {
         height: auto;
         padding-bottom: 60px;
+        position: relative;
     }
 
     .slider-gray-inner {
@@ -289,10 +291,8 @@
   
 
     .gray-buttons-container {
-        top: auto;
-        bottom: 20px;
-        width: 200px;
-        left: 50%;
-        transform: translateX(-50%);
+        position: absolute;
+        top: -80px;
+        width: 97vw;
     }
 }
