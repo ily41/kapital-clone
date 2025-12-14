@@ -1,0 +1,274 @@
+.news-slider-section {
+    width: 100%;
+    background-color: #e8ecf1;
+    padding: 60px 0 80px 0;
+    margin-top: 100px;
+}
+
+
+
+.news-slider-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Header */
+.news-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.news-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.news-all-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #ff4b60;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: gap 0.2s ease;
+}
+
+.news-all-link:hover {
+    gap: 12px;
+}
+
+.news-all-link svg {
+    transition: transform 0.2s ease;
+}
+
+.news-all-link:hover svg {
+    transform: translateX(4px);
+}
+
+.news-header-line {
+    width: 100%;
+    height: 1px;
+    background-color: #d0d5dc;
+    margin-bottom: 32px;
+}
+
+/* Slider Wrapper */
+.news-slider-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Desktop Track */
+.news-slider-track {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.news-slide-group {
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding-right: 60px;
+}
+
+/* Mobile Track - Hidden by default */
+.news-slider-track-mobile {
+    display: none;
+}
+
+/* News Item */
+.news-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    cursor: pointer;
+    padding: 16px 0;
+}
+
+.news-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.news-day {
+    width: 56px;
+    height: 56px;
+    border: 2px solid #ff4b60;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    background: transparent;
+}
+
+.news-month {
+    font-size: 13px;
+    color: #666;
+    margin-top: 6px;
+}
+
+.news-item-title {
+    flex: 1;
+    font-size: 15px;
+    font-weight: 500;
+    color: #1a1a1a;
+    line-height: 1.5;
+    margin: 0;
+    padding-top: 4px;
+}
+
+.news-item-arrow {
+    flex-shrink: 0;
+    color: #999;
+    padding-top: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.news-item:hover .news-item-arrow {
+    color: #ff4b60;
+}
+
+/* Navigation Arrow */
+.news-arrow {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    transition: color 0.2s ease;
+}
+
+.news-arrow:hover {
+    color: #ff4b60;
+}
+
+.news-arrow svg {
+    width: 32px;
+    height: 32px;
+}
+
+/* Responsive - Tablet */
+@media (max-width: 1024px) {
+    .news-slide-group {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .news-day {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .news-item-title {
+        font-size: 14px;
+    }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+    .news-slider-section {
+        padding: 40px 0 60px 0;
+    }
+
+    .news-slider-container {
+        padding: 0 20px;
+    }
+
+    .news-title {
+        font-size: 26px;
+    }
+
+    .news-all-link {
+        font-size: 14px;
+    }
+
+    .news-header-line {
+        margin-bottom: 24px;
+    }
+
+    /* Hide desktop, show mobile */
+    .news-slider-track {
+        display: none;
+    }
+
+    .news-slider-track-mobile {
+        display: flex;
+        transition: transform 0.4s ease;
+    }
+
+    .news-slide-mobile {
+        min-width: 100%;
+        padding-right: 48px;
+    }
+
+    .news-item {
+        gap: 16px;
+        padding: 12px 0;
+    }
+
+    .news-day {
+        width: 52px;
+        height: 52px;
+        font-size: 18px;
+    }
+
+    .news-month {
+        font-size: 12px;
+    }
+
+    .news-item-title {
+        font-size: 15px;
+    }
+
+    .news-arrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    .news-arrow svg {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .news-slider-section {
+        padding: 32px 0 48px 0;
+    }
+
+    .news-title {
+        font-size: 24px;
+    }
+
+    .news-day {
+        width: 48px;
+        height: 48px;
+        font-size: 16px;
+    }
+
+    .news-item-title {
+        font-size: 14px;
+    }
+}

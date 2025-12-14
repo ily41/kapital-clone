@@ -1,9 +1,13 @@
-import Header from './components/Header'
-import SubNavbar from './components/SubNavbar'
-import Slider from './components/Slider'
-import ServiceCards from './components/ServiceCards'
-import CardsSlider from './components/CardsSlider'
-import CashCredit from './components/CashCredit'
+import Header from './components/jsx/Header'
+import SubNavbar from './components/jsx/SubNavbar'
+import Slider from './components/jsx/Slider'
+import ServiceCards from './components/jsx/ServiceCards'
+import CardsSlider from './components/jsx/CardsSlider'
+import CashCredit from './components/jsx/CashCredit'
+import InfoCards from './components/jsx/InfoCards'
+import NewsSlider from './components/jsx/NewsSlider'
+import CurrencyCalculator from './components/jsx/CurrencyCalculator'
+import Footer from './components/jsx/Footer'
 import './App.css'
 
 function App() {
@@ -19,8 +23,11 @@ function App() {
         </div>
         <CardsSlider />
         <CashCredit />
-        <div className='h-100'></div>
+        <InfoCards />
+        <NewsSlider />
+        <CurrencyCalculator />
       </main>
+      <Footer />
     </>
   )
 }

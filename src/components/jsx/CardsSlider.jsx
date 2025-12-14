@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './CardsSlider.css';
+import '../css/CardsSlider.css';
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 
 const cards = [

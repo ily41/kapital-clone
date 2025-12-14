@@ -1,4 +1,4 @@
-import './ServiceCards.css';
+import '../css/ServiceCards.css';
 
 const ServiceCards = () => {
   const services = [

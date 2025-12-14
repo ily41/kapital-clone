@@ -1,5 +1,6 @@
 import React from 'react';
-import './CashCredit.css';
+import CreditCalculator from './CreditCalculator';
+import '../css/CashCredit.css';
 
 const CashCredit = () => {
     const data = {
@@ -70,6 +71,9 @@ const CashCredit = () => {
                 </div>
 
             </div>
+            
+            {/* Credit Calculator Section */}
+            <CreditCalculator />
         </section>
     );
 };

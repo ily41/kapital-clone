@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { HiOutlineChevronLeft, HiOutlineChevronRight } from 'react-icons/hi';
-import './Slider.css';
+import '../css/Slider.css';
 
 const Slider = () => {
   const slides = [

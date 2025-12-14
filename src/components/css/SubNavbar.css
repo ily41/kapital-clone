@@ -1,0 +1,276 @@
+.sub-navbar {
+    background: #E8ECF1;
+    width: 100%;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+    z-index: 100;
+}
+
+.sub-navbar:has(.sub-nav-item.active),
+.sub-navbar:has(.sub-nav-item:hover) {
+    border-bottom-color: transparent;
+}
+
+.sub-navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 2rem;
+    padding: 1rem 2rem;
+    max-width: 1240px;
+    margin: 0 auto;
+    overflow: visible;
+}
+
+
+.sub-nav-item {
+    position: relative;
+}
+
+.sub-nav-link {
+    color: #555;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: color 0.2s;
+    padding: 0.5rem 0;
+    position: relative;
+    display: block;
+}
+
+.sub-nav-link:hover,
+.sub-nav-link.active {
+    color: #EF3E42;
+}
+
+.sub-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: #EF3E42;
+    transition: width 0.2s;
+}
+
+.sub-nav-link:hover::after,
+.sub-nav-link.active::after {
+    width: 100%;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding-top: 0;
+    z-index: 99;
+    background: #fff;
+    border-top: 3px solid #EF3E42;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.dropdown-content {
+    background: #ffffff;
+    border-radius: 0;
+    display: flex;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.dropdown-links {
+    flex: 1;
+    padding: 32px 40px;
+    border-right: 1px solid #eee;
+    min-width: 350px;
+}
+
+.dropdown-header {
+    color: #EF3E42;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.dropdown-columns {
+    display: flex;
+    gap: 60px;
+}
+
+.dropdown-column {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 140px;
+}
+
+.dropdown-column li {
+    margin-bottom: 14px;
+}
+
+.dropdown-column li:last-child {
+    margin-bottom: 0;
+}
+
+.dropdown-column a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: color 0.2s;
+    display: block;
+}
+
+.dropdown-column a:hover {
+    color: #EF3E42;
+}
+
+/* Dropdown Promo Section */
+.dropdown-promo {
+    width: 320px;
+    padding: 28px 24px;
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.promo-text {
+    flex: 1;
+}
+
+.promo-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 8px 0;
+}
+
+.promo-subtitle {
+    font-size: 13px;
+    color: #666;
+    margin: 0 0 12px 0;
+}
+
+.promo-description {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.5;
+    margin: 0 0 16px 0;
+}
+
+.promo-button {
+    background: #EF3E42;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 24px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+    white-space: nowrap;
+}
+
+.promo-button:hover {
+    background: #d63438;
+}
+
+.promo-image {
+    flex-shrink: 0;
+}
+
+.promo-image img {
+    max-width: 140px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Circle Icon Style for PUL KÖÇÜRMƏLƏRİ */
+.promo-circle-icon {
+    width: 120px;
+    height: 120px;
+    background: #EF3E42;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.promo-circle-icon img {
+    width: 50px;
+    height: 50px;
+    filter: brightness(0) invert(1);
+}
+
+/* Specific adjustments for different dropdowns */
+
+/* Single column dropdown (ƏMANƏTLƏR, PUL KÖÇÜRMƏLƏRİ, ONLAYN XİDMƏTLƏR) */
+.dropdown-columns:has(.dropdown-column:only-child) {
+    gap: 0;
+}
+
+/* Hide sub navbar on mobile/tablet */
+@media (max-width: 1024px) {
+    .sub-navbar {
+        display: none;
+    }
+}
+
+/* Tablet adjustments */
+@media (max-width: 1200px) {
+    .dropdown-content {
+        min-width: 600px;
+        max-width: 750px;
+    }
+
+    .dropdown-links {
+        padding: 24px 28px;
+        min-width: 280px;
+    }
+
+    .dropdown-columns {
+        gap: 40px;
+    }
+
+    .dropdown-promo {
+        width: 280px;
+        padding: 24px 20px;
+    }
+
+    .promo-image img {
+        max-width: 110px;
+    }
+
+    .promo-circle-icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .promo-circle-icon img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+/* Animation */
+.dropdown-menu {
+    animation: dropdownFadeIn 0.2s ease;
+}
+
+@keyframes dropdownFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,247 @@
+.info-cards-section {
+    width: 100%;
+    padding: 60px 0 0 0;
+    background-color: #e8ecf1;
+}
+
+.info-cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    max-width: 100%;
+    padding: 0 8px;
+}
+
+/* Base Card Styles */
+.info-card {
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.info-card-content {
+    position: relative;
+    z-index: 2;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 50%;
+}
+
+.info-card-title {
+    font-size: 32px;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.info-card-description {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    max-width: 320px;
+}
+
+.info-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: gap 0.2s ease;
+    margin-top: auto;
+}
+
+.info-card-link:hover {
+    gap: 12px;
+}
+
+.info-card-link svg {
+    transition: transform 0.2s ease;
+}
+
+.info-card-link:hover svg {
+    transform: translateX(4px);
+}
+
+.info-card-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.info-card-image img {
+    max-height: 100%;
+    width: auto;
+    object-fit: contain;
+    object-position: bottom right;
+}
+
+/* Gray Card (Onlayn kredit) */
+.info-card-gray {
+    background-color: #e8ecf1;
+}
+
+.info-card-gray .info-card-title {
+    color: #1a1a1a;
+}
+
+.info-card-gray .info-card-description {
+    color: #333;
+}
+
+.info-card-gray .info-card-link {
+    color: #ff4b60;
+}
+
+/* Red Card (İnsan resursları) */
+.info-card-red {
+    background-color: #ed1c24;
+}
+
+.info-card-red .info-card-title {
+    color: #ffffff;
+}
+
+.info-card-red .info-card-description {
+    color: #ffffff;
+}
+
+.info-card-red .info-card-link {
+    color: #ffffff;
+}
+
+/* Responsive - Tablet */
+@media (max-width: 1024px) {
+    .info-cards-section {
+        padding: 40px 0 0 0;
+    }
+
+    .info-cards-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 0 16px;
+    }
+
+    .info-card {
+        min-height: 450px;
+    }
+
+    .info-card-content {
+        padding: 40px;
+        max-width: 60%;
+    }
+
+    .info-card-title {
+        font-size: 28px;
+    }
+
+    .info-card-image img {
+        max-height: 90%;
+    }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+    .info-cards-section {
+        padding: 32px 0 0 0;
+    }
+
+    .info-cards-container {
+        gap: 0;
+        padding: 0;
+    }
+
+    .info-card {
+        min-height: 500px;
+        flex-direction: column;
+        border-radius: 0;
+    }
+
+    .info-card-content {
+        padding: 32px 24px;
+        max-width: 100%;
+        order: 1;
+    }
+
+    .info-card-title {
+        font-size: 26px;
+    }
+
+    .info-card-description {
+        font-size: 14px;
+        max-width: 100%;
+    }
+
+    .info-card-image {
+        position: relative;
+        width: 100%;
+        height: auto;
+        order: 2;
+        justify-content: center;
+        padding: 0 24px 24px;
+    }
+
+    .info-card-image img {
+        max-width: 80%;
+        max-height: 250px;
+        height: auto;
+    }
+
+    /* Gray card - image centered at bottom */
+    .info-card-gray {
+        flex-direction: column;
+    }
+
+    .info-card-gray .info-card-image {
+        order: 2;
+    }
+
+    /* Red card - image at bottom right */
+    .info-card-red .info-card-image {
+        justify-content: flex-end;
+        padding-right: 0;
+    }
+
+    .info-card-red .info-card-image img {
+        max-width: 60%;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-card {
+        min-height: 450px;
+    }
+
+    .info-card-content {
+        padding: 24px 20px;
+    }
+
+    .info-card-title {
+        font-size: 24px;
+    }
+
+    .info-card-description {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .info-card-link {
+        font-size: 14px;
+    }
+
+    .info-card-image img {
+        max-width: 70%;
+        max-height: 200px;
+    }
+}
+
